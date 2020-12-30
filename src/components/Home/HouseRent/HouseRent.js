@@ -21,7 +21,6 @@ const HouseRent = () => {
         history.push('/houseDetail')
     }
 
-    console.log(houseRent)
     return (
         <div style={{backgroundColor:"#F1F6F4"}}>
             <div>
@@ -34,8 +33,8 @@ const HouseRent = () => {
             <div className="container">
                 <div className="row">
                     {houseRent.length > 0 ?
-                        houseRent.map(house=> 
-                            <div className="col-md-4" style={{fontFamily:"poppins"}}>
+                        houseRent.map((house, idx)=> 
+                            <div key={idx} className="col-md-4" style={{fontFamily:"poppins"}}>
                                 <div className="card" style={{marginBottom: "29px", border: "none"}}>
                                     <img src={`data:image/png;base64,${house.picture.img}`} className="card-img-top" alt="..."/>
                                     <div className="card-body">

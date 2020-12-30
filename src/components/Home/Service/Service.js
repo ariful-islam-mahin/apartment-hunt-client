@@ -35,8 +35,8 @@ const Service = () => {
             <div className="d-flex justify-content-center">
                 <div className="w-75 row">
                     {
-                        serviceData.map(service=>
-                            <div className="col-md-4 text-center service-area">
+                        serviceData.map((service, idx)=>
+                            <div key={idx} className="col-md-4 text-center service-area">
                                 <img src={service.img} alt="" height="80" width="80" style={{marginBottom:"24px"}}/>
                                 <h5 style={{color:"#16322E", height:"30px", fontSize:"20px", fontWeight:"semiBold"}}>{service.title}</h5>
                                 <p style={{color:"#606268"}}>{service.description}</p>

@@ -2,8 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './components/NotFound/NotFound';
@@ -31,7 +30,6 @@ function App() {
     confirmPassword: "",
     error: "",
   });
-  // console.log(houseDetail)
   return (
     <UserContext.Provider value={[houseDetail, setHouseDetail, user, setUser]}>
       <Router>
